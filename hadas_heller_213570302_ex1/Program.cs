@@ -7,7 +7,7 @@ namespace MyApp
 
     internal class Program
     {
-        static void rectangeTower(int width, int height)
+        static void rectangleTower(int width, int height)
         {
             if (width == height || Math.Abs(width - height) > 5)
             {
@@ -23,7 +23,7 @@ namespace MyApp
             string answer="0";
             while (answer != "1" && answer != "2") {
                 Console.WriteLine("1 for triangle perimeter\n2 for printing the triangle");
-                answer = (Console.ReadLine());
+                answer = Console.ReadLine();
 
             }
             if (answer == "1")
@@ -54,14 +54,13 @@ namespace MyApp
             int height=0,width=0;
             for (; ; )
             {
-                Console.WriteLine("Please type your choice; \n1 to rectange tower \n2 to tringe tower");
+                Console.WriteLine("Please type your choice; \n1 to rectangle tower \n2 to tringe tower");
                 answer = Console.ReadLine();
-                //fix case when a string is typed
                 switch (answer)
                 {
                     case "1":
                         getWidthAndHeight(ref width, ref height);
-                        rectangeTower(width, height);
+                        rectangleTower(width, height);
                         break;
                     case "2":
                         getWidthAndHeight(ref width, ref height);
