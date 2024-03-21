@@ -20,13 +20,13 @@ namespace MyApp
         }
         static void triangleTower(int width,int height)
         {
-            int answer=0;
-            while (answer != 1 && answer != 2) {
+            string answer="0";
+            while (answer != "1" && answer != "2") {
                 Console.WriteLine("1 for triangle perimeter\n2 for printing the triangle");
-                answer = Convert.ToInt32(Console.ReadLine());
+                answer = (Console.ReadLine());
 
             }
-            if (answer == 1)
+            if (answer == "1")
             {
                 Console.WriteLine(width + Math.Sqrt(Math.Pow(width, 2) + 4 * Math.Pow(height, 2))+"\n");
             }
@@ -50,23 +50,24 @@ namespace MyApp
         }
         static void Main(string[] args)
         {
-            int answer, height=0,width=0;
+            string answer;
+            int height=0,width=0;
             for (; ; )
             {
                 Console.WriteLine("Please type your choice; \n1 to rectange tower \n2 to tringe tower");
-                answer = Convert.ToInt32(Console.ReadLine());
+                answer = Console.ReadLine();
                 //fix case when a string is typed
                 switch (answer)
                 {
-                    case 1:
+                    case "1":
                         getWidthAndHeight(ref width, ref height);
                         rectangeTower(width, height);
                         break;
-                    case 2:
+                    case "2":
                         getWidthAndHeight(ref width, ref height);
                         triangleTower(width, height);
                         break;
-                    case 3:
+                    case "3":
                         return;
                     default:
                         Console.WriteLine("wrong input\n");
