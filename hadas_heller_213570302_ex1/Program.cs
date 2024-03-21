@@ -41,15 +41,10 @@ namespace MyApp
                     int count1=height-2-(num*x)+num;
                     for (int i = 0; i < height; i++)
                     {
-                        /*
-                        for(int k = (height-i)/2; k > 0; k--)
-                        {
-                            Console.Write(" ");
-                        }*/
                         for (int j = 0; j < asterisks; j++) {
                             Console.Write("*");
                         }
-                        if (i == 0 ||i==count1||(i> count1&&(height-i-1)%num==1)) { asterisks += 2; };
+                        if (i == 0 ||i==count1||(i> count1&&(height-i-1)%num==1)||i+2==height) { asterisks += 2; };
                         Console.WriteLine("\n");
                     }
                 }
