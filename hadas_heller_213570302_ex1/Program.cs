@@ -36,7 +36,7 @@ namespace MyApp
                 else
                 {
                     int asterisks = 1;
-                    int x = (width - 3 )/ 2;
+                    int x = (width - 3 )/ 2;    //check case width <3
                     int num=(height-2)/ x;
                     int count1=height-2-(num*x)+num;
                     for (int i = 0; i < height; i++)
