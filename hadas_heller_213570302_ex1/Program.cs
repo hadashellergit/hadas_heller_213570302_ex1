@@ -35,18 +35,23 @@ namespace MyApp
                 if (width % 2 == 0 || width > height * 2) { Console.WriteLine("the triangle is unprintable\n"); }
                 else
                 {
+                    //haa
                     int asterisks = 1;
-                    int x = (width - 3 )/ 2;    //check case width <3
-                    int num=(height-2)/ x;
-                    int count1=height-2-(num*x)+num;
+                    int x = ((width - 3) / 2);//the number of jumps requiered
+                    int blocks =( height - 2) / x;//the length of each block lines with the same ast count
+                    int firstBlock =blocks + ((height - 2)%x);//the lenght of the first block is the middle height % the number of jumps
+                    
                     for (int i = 0; i < height; i++)
                     {
                         for (int j = 0; j < asterisks; j++) {
                             Console.Write("*");
                         }
-                        if (i == 0 ||i==count1||(i> count1&&(height-i-1)%num==1)||i+2==height) { asterisks += 2; };
+                        
+                        if (i == 0 ||i== firstBlock || (i> firstBlock && (i-firstBlock)%blocks==0)) { asterisks += 2; };
+
                         Console.WriteLine("\n");
                     }
+
                 }
 
             }
