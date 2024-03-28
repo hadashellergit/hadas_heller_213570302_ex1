@@ -43,6 +43,10 @@ namespace MyApp
                     
                     for (int i = 0; i < height; i++)
                     {
+                        for (int j = 0; j < (width- asterisks)/2; j++)
+                        {
+                            Console.Write(" ");
+                        }
                         for (int j = 0; j < asterisks; j++) {
                             Console.Write("*");
                         }
